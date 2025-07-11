@@ -1,4 +1,5 @@
 using System;
+using System.IO;
 
 class Program
 {
@@ -29,13 +30,24 @@ class Program
             }
             else if (choice == 3)
             {
-                Console.WriteLine("You chose to load.");
-                // Here you would typically call a method to handle loading entries from a file
+                Console.WriteLine("Enter the file name to load:");
+                string fileName = Console.ReadLine();
+                string[] lines = System.IO.File.ReadAllLines(fileName);
+
+                journal.LoadFromFile(fileName);
             }
             else if (choice == 4)
             {
-                Console.WriteLine("You chose to save.");
-                // Here you would typically call a method to handle saving entries to a file
+                Console.WriteLine("Enter the file name:");
+                string fileName = Console.ReadLine();
+                if (string.IsNullOrEmpty(fileName))
+                {
+                    Console.WriteLine("File name cannot be empty.");
+                }
+                else
+                {
+                    journal.SaveToFile(fileName);
+                }
             }
             else if (choice == 5)
             {

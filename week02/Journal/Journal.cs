@@ -43,20 +43,38 @@ public class Journal
             foreach (Entry newEntry in _entries)
             {
                 newEntry.DisplayEntry();
-                Console.WriteLine("-----------------------------------------------------------------------");
+                Console.WriteLine();
             }
         }
-       
    }
 
    public void SaveToFile(string file)
    {
-       
+        using (StreamWriter writer = new StreamWriter(file))
+        {
+            foreach (Entry entry in _entries)
+            {
+                writer.WriteLine($"Date:{entry._date}- Prompt:{entry._promptText}, {entry._entryText}.");
+                writer.WriteLine();
+            }
+        }
+        Console.WriteLine("Entries saved to file.");   
    }
 
     public void LoadFromFile(string file)
-    {
-         
-    }
+    {   
+        if (!File.Exists(file))
+        {
+            Console.WriteLine("File not found.");
+            return;
+        }
 
+        string[] lines = System.IO.File.ReadAllLines(file);
+
+        Console.WriteLine("File content:");
+        foreach (string line in lines)
+        {
+            Console.WriteLine(line);
+        }
+    }
 }
