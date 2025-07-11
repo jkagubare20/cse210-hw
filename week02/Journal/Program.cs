@@ -60,6 +60,7 @@ class Program
             }
         }
 
-
+       //I exceeded requirements by fixing the prompt generator to not repeat prompts and providing responses when user input has not been given.
+        //I also added a check to ensure the file name is not empty when saving entries.
     }
 }
