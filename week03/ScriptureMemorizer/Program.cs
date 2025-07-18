@@ -24,6 +24,5 @@ class Program
             input = Console.ReadLine();
         }
 
-
     }
 }
