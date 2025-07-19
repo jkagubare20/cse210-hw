@@ -1,5 +1,6 @@
 using System;
 
+// To exceed requirements i added a multiple verse option.
 class Program
 {
     static void Main(string[] args)
