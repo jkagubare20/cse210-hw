@@ -55,7 +55,7 @@ public class Journal
             foreach (Entry entry in _entries)
             {
                 writer.WriteLine($"Date:{entry._date}- Prompt:{entry._promptText}, {entry._entryText}.");
-                writer.WriteLine();
+                writer.WriteLine(); //
             }
         }
         Console.WriteLine("Entries saved to file.");   
