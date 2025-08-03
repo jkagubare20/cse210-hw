@@ -31,7 +31,8 @@ public class Activity
 
     public void DisplayEndingMessage()
     {
-        Console.WriteLine("Thank you for participating in the activity!");
+        Console.WriteLine();
+        Console.WriteLine($"Thank you for participating in the {_name}!");
     }
 
     public void ShowSpinner(int seconds)
@@ -52,18 +53,6 @@ public class Activity
             Thread.Sleep(1000);
             Console.Write("\b \b");
         }
-
-    //     DateTime startTime = DateTime.Now;
-    //     DateTime endTime = startTime.AddSeconds(10);
-    //     while (DateTime.Now < endTime)
-    //     {
-    //         foreach (var item in spinner)
-    //         {
-    //             Console.Write(item);
-    //             Thread.Sleep(500);
-    //             Console.Write("\b \b");
-    //         }
-    //     }
     }
 
     public void ShowCountdown(int seconds)
