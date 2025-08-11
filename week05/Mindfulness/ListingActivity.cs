@@ -25,6 +25,10 @@ public class ListingActivity : Activity
 
     public void Run()
     {
+        Console.WriteLine("Get ready...");
+        ShowCountdown(3);
+
+        Console.WriteLine("Welcome to the Listing Activity!");
         Console.WriteLine("Here is your prompt:");
         GetRandomPrompt();
         DateTime startTime = DateTime.Now;

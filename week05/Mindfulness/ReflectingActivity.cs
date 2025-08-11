@@ -36,6 +36,9 @@ public class ReflectingActivity : Activity
 
     public void Run()
     {
+        Console.WriteLine("Get ready...");
+        ShowCountdown(3);
+        
         DisplayPrompt();
         DisplayQuestion();
         DateTime startTime = DateTime.Now;
